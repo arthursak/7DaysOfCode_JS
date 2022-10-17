@@ -1,9 +1,9 @@
-const numAdvinha = Math.random() * (10 - 1);
+const numAdvinha = Math.floor(Math.random() * (10 - 0) + 0);
 
 var tentativa = prompt("Bem vindo ao jogo de advinha do Tuts!\nTente adivinhar o número em que estou pensando!");
-var qntTentativa = 3;
+var qntTentativa = 3
 
-while (qntTentativa != 0) {
+while (qntTentativa > 0) {
     
     if (tentativa == numAdvinha){
         alert(`Parabéns, Você acertou!\nO número era ${numAdvinha}`)
