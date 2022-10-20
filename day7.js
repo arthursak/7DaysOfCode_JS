@@ -1,56 +1,60 @@
-let num1
-let num2
-let msg
 let soma
-let sub
-let mult
+let num1 
+let num2
+let multi
 let div
+let sub
+let opr
+    
+opr = prompt('Que tipo de operação você deseja fazer?\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n0 - Sair')
+while (opr != 0) {
+    num1 = prompt('Digite o 1º Número: ')
+    num2 = prompt('Digite o 2º Número: ')
 
-
-alert('--------------CalculaTuts--------------\n              Bem Vindo!              ')
-msg = prompt('Qual operação você gostaria de realizar?\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair da calculadora')
-
-while (msg != 5) {
-    num1 = prompt('Digite o 1º número')
-    num2 = prompt('Digite o 2º número')
-
-    switch (msg) {
-        case 1:
-            somar();
-            break;
-        case 2:
-            subt();
-            break;
-        case 3:
-            multi();
-            break;
-        case 4:
-            divi();
-            break;
-        case 5:
-            alert('Até mais!')
-
+    switch (opr){
+        case '1':
+            somar()
+            break
+        case '2':
+            subtracao()
+            break
+        case '3':
+            multiplica()
+            break
+        case '4':
+            divisao()
+            break
+        default:
+            break
     }
-    msg = prompt('Qual outra operação você gostaria de realizar?\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Sair da calculadora')
+    
+    opr = prompt('Quer fazer mais alguma operação?\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n0 - Sair')
 
 }
+
+sair()
+
 
 function somar() {
-    soma = num1 + num2
-    console.log(soma)
+    soma = parseInt(num1) + parseInt(num2)
+    alert(`A soma de ${num1} e ${num2} é: `+ soma)
 }
 
-function subt() {
+function subtracao() {
     sub = num1 - num2
-    alert(sub)
+    alert(`A subtração de ${num1} e ${num2} é: `+ sub)
 }
 
-function multi() {
-    mult = num1 * num2
-    alert(mult)
+function multiplica() {
+    multi = num1 * num2
+    alert(`A multiplicação de ${num1} e ${num2} é: `+ multi)
 }
 
-function divi() {
+function divisao() {
     div = num1 / num2
-    alert(div)
+    alert(`A divisão de ${num1} e ${num2} é: `+ div)
+}
+
+function sair() {
+    alert('...Saindo...\nAté mais!')
 }
