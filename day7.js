@@ -56,5 +56,5 @@ function divisao() {
 }
 
 function sair() {
-    alert('...Saindo...\nAté mais!')
+    alert('...Saindo...\nAté mais!!')
 }
