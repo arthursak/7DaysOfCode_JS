@@ -81,6 +81,7 @@ function removeLista() {
       listaLaticinios.splice(posicao, 1);
     } else {
       alert("Não foi possivel localizar o alimento");
+      alert("Voltando ao menu...");
     }
     alert("Voltando ao menu...");
   } else if (categoria == 3) {
@@ -91,6 +92,7 @@ function removeLista() {
       listaCongelados.splice(posicao, 1);
     } else {
       alert("Não foi possivel localizar o alimento");
+      alert("Voltando ao menu...");
     }
   } else if (categoria == 4) {
     remover = prompt("Qual alimento você quer remover?");
@@ -100,6 +102,7 @@ function removeLista() {
       listaDoces.splice(posicao, 1);
     } else {
       alert("Não foi possivel localizar o alimento");
+      alert("Voltando ao menu...");
     }
   } else {
     alert(`${categoria} não é uma categoria válida`);
